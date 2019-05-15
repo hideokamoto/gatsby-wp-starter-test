@@ -9,7 +9,7 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         // The base url to your WP site.
-        baseUrl: '8cd047fc-b77d-4888-a6b4-50840022a515.appdev.getshifter.io:20119',
+        baseUrl: process.env.CONTAINER_URL,
         // WP.com sites set to true, WP.org set to false
         hostingWPCOM: false,
         // The protocol. This can be http or https.
@@ -18,11 +18,7 @@ module.exports = {
         useACF: false,
         auth: {},
         // Set to true to debug endpoints on 'gatsby build'
-        verboseOutput: true,
-        searchAndReplaceContentUrls: {
-          sourceUrl: 'https://8cd047fc-b77d-4888-a6b4-50840022a515.appdev.getshifter.io:20119',
-          replacementUrl: 'https://optimistic-heyrovsky226.on.getshifter.io',
-        },
+        verboseOutput: false,
       },
     },
     'gatsby-plugin-sharp',
